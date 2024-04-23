@@ -39,19 +39,20 @@ class MainActivity3 : AppCompatActivity() {
         var actionImage=findViewById<ImageView>(R.id.statusIv)
 
         eatProgress.max=1000
-        var currentProgress=0
+        playProgress.max=1000
+        bathProgress.max=1000
+        smokeProgress.max=2000
 
+        var eatCurrentProgress=0
+        var playCurrentProgress=0
+        var bathCurrentProgress=0
+        var smokeCurrentProgress=0
 
+        fun updateProgress(progress:Int,pbName:ProgressBar){
+            ObjectAnimator.ofInt(pbName,"progress",progress)
+                .start()
 
-
-    eatBtn.setOnClickListener {
-
-    fun updateProgress(){
-        currentProgress+=100
-        ObjectAnimator.ofInt(eatProgress,"progress",currentProgress)
-            .start()
-
-    }
+        }
         fun changeImageDelay(){
 
 
@@ -61,25 +62,58 @@ class MainActivity3 : AppCompatActivity() {
 
         }
 
-        fun checkProgress(){
-            if (currentProgress>=eatProgress.max){
+        fun maxProgress(progress:Int,pbName:ProgressBar,maxImg:Int){
+            if (progress>=pbName.max){
 
-                actionImage.setImageResource(R.drawable.sakamoto_full)
+                actionImage.setImageResource(maxImg)
             }
 
         }
 
-        fun start(){
-            actionImage.setImageResource(R.drawable.sakamoto_eating)
-            updateProgress()
-            changeImageDelay()
-            checkProgress()
-
+        fun start(action:Int) {
+            actionImage.setImageResource(action)
 
 
         }
 
-        start()
+
+    eatBtn.setOnClickListener {
+        eatCurrentProgress+=100
+        start(R.drawable.sakamoto_eating)
+        changeImageDelay()
+        updateProgress(eatCurrentProgress,eatProgress)
+        maxProgress(eatCurrentProgress,eatProgress,R.drawable.sakamoto_full)
+
+
+
+        }
+        playBtn.setOnClickListener {
+            playCurrentProgress+=100
+            start(R.drawable.playing)
+            changeImageDelay()
+            updateProgress(playCurrentProgress,playProgress)
+            maxProgress(playCurrentProgress,playProgress,R.drawable.sakamoto_sleep)
+
+        }
+
+    bathBtn.setOnClickListener {
+        bathCurrentProgress+=150
+        start(R.drawable.sakamoto_bath)
+        changeImageDelay()
+        updateProgress(bathCurrentProgress,bathProgress)
+        maxProgress(bathCurrentProgress,bathProgress,R.drawable.sakamoto_sparkling)
+    }
+
+        smokeBtn.setOnClickListener {
+            smokeCurrentProgress+=1000
+            start(R.drawable.sakamoto_smoking)
+            changeImageDelay()
+            updateProgress(smokeCurrentProgress,smokeProgress)
+            maxProgress(smokeCurrentProgress,smokeProgress,R.drawable.sakamoto_red_eye)
+        }
+
+
+
 
 
 
@@ -89,5 +123,6 @@ class MainActivity3 : AppCompatActivity() {
 
 
 
+
+
     }
-}
