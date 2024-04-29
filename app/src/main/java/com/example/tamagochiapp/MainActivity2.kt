@@ -25,10 +25,14 @@ class MainActivity2 : AppCompatActivity() {
         val nameField=findViewById<EditText>(R.id.nameField)
         val nextBtn=findViewById<Button>(R.id.nextBtn)
         val nextPage=Intent(this,MainActivity3::class.java)
+
+//        toast if the edittext is empty
         nextBtn.setOnClickListener {
             if (nameField.text.isBlank()){
                 Toast.makeText(this, "Name cannot be empty", Toast.LENGTH_SHORT).show()
             }
+
+//            save EDitTExt value to petName extra
             else{
                 val pet = Pet(nameField.text.toString())
                 nextPage.putExtra("petName", pet.name)

@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
+//        intent to next page
         val startBtn=findViewById<Button>(R.id.startBtn)
         val page2Intent=Intent(this, MainActivity2::class.java)
         startBtn.setOnClickListener {
