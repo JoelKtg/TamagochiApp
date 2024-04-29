@@ -5,21 +5,25 @@
 </p>
 <ul>
  <li>Welcome page</li>
- 
+ <p><b>The welcome page only features a single button which leads you to the next activity</b></p>
  
  ![Screenshot_2024 04 29_22 06 40 095](https://github.com/JoelKtg/TamagochiApp/assets/161457166/b799f643-75a4-4477-b8fe-4523480ab0dd)
 
  <li>Naming the animal</li>
 
+ <p><b>Takes the name from the input field and pass it to the next Intent<b/></p>
+
 ![Screenshot_2024 04 29_22 06 47 420](https://github.com/JoelKtg/TamagochiApp/assets/161457166/5e26f84d-00fe-4072-9ec2-0d416484d9ee)
 
  
  <li>taking care of the animal</li>
+
  
 ![Screenshot_2024 04 29_22 06 59 021](https://github.com/JoelKtg/TamagochiApp/assets/161457166/488879f0-1270-483c-8ee5-ce2c5e0619be)
 
  
  <li>Animal has died </li>
+ <b>gives you the chance to play again </b>
  
  ![Screenshot_2024 04 29_22 10 08 171](https://github.com/JoelKtg/TamagochiApp/assets/161457166/d3c48549-e612-4071-bbb1-58a43276a0eb)
 
@@ -47,5 +51,13 @@
 
 <h2>Objectives of the game</h2>
 <p>The objective of the game is to keep your pet alive by keeping the overall health bar from reaching Zero</p>
+<p>The health increase and decrease while certains conditions are met</p>
+
+
+<h2>
+ Youtube Link
+</h2>
+<p></p>
+
 
 
