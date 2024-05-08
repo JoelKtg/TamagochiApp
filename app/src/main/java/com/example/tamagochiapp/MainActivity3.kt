@@ -113,7 +113,7 @@ class MainActivity3 : AppCompatActivity() {
         }
         else{
 
-        eatCurrentProgress+=100
+        eatCurrentProgress+=280
             healthCurrentProgress+=200
             overallHealth()
 
@@ -135,7 +135,7 @@ class MainActivity3 : AppCompatActivity() {
                 dead()
             }
             else{
-                playCurrentProgress+=100
+                playCurrentProgress+=250
                 healthCurrentProgress+=300
             overallHealth()
             }
@@ -156,8 +156,8 @@ class MainActivity3 : AppCompatActivity() {
         }
             else{
 
-        bathCurrentProgress+=150
-            healthCurrentProgress+=200
+        bathCurrentProgress+=300
+            healthCurrentProgress+=300
             overallHealth()
             }
         start(R.drawable.sakamoto_bath)
